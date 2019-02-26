@@ -1,6 +1,8 @@
 import Array.JArrayQueue;
+import Array.JArrayStack;
 import Array.LoopQueue;
 import Jinterface.Queue;
+import Jinterface.Stack;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,6 +34,18 @@ public class ArrayTest {
         loopQueue.dequeue();
         System.out.println("jArrayQueue"+jArrayQueue.toString());
         System.out.println("loopQueue"+loopQueue.toString());
+
+    }
+    @Test
+    public void stackTest(){
+        Stack jArrayStack = new JArrayStack();
+        for(int i = 0 ; i < 10 ; i++){
+            jArrayStack.push(i);
+
+        }
+        System.out.println("jArrayStack"+jArrayStack.toString());
+        jArrayStack.pop();
+        System.out.println("jArrayStack"+jArrayStack.toString());
 
     }
 }
