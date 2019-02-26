@@ -80,11 +80,11 @@ public class JArray<E>{
         }
         return -1;
     }
-public void removeElement(E e){
-        int index = find(e);
-        if(index!=-1){
-            remove(index);
-        }
+    public void removeElement(E e){
+            int index = find(e);
+            if(index!=-1){
+                remove(index);
+            }
 }
     public void add (int index ,E e){
         if(index<0 || index > size ){
