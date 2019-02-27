@@ -1,6 +1,10 @@
 
+import array.JArrayQueue;
+import array.LoopQueue;
+import jinterface.Queue;
 import jinterface.Stack;
 import linkedList.JLinkedList;
+import linkedList.LinkedListQueue;
 import linkedList.LinkedListStack;
 import org.junit.After;
 import org.junit.Before;
@@ -38,6 +42,19 @@ public class LinkedListTest {
         System.out.println("jArrayStack"+stack.toString());
         stack.pop();
         System.out.println("jArrayStack"+stack.toString());
+
+    }
+    @Test
+    public void queueTest(){
+        Queue queue = new LinkedListQueue();
+        for(int i = 0 ; i < 10 ; i++){
+            queue.enqueue(i);
+        }
+        System.out.println("loopQueue"+queue.toString());
+        queue.dequeue();
+        System.out.println("loopQueue"+queue.toString());
+        queue.enqueue(100);
+        System.out.println("loopQueue"+queue.toString());
 
     }
 }
