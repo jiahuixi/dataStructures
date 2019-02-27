@@ -40,9 +40,9 @@ public class JArray<E>{
     public void addFirst(E e){ add(0,e); }
     public void addLast(E e){ add(size,e); }
     public E getFirst(){return get(0);}
-    public E getLast(){return get(size);}
+    public E getLast(){return get(size-1);}
     public E removeFirst(){return remove(0);}
-    public E removeLast(){return remove(size);}
+    public E removeLast(){return remove(size-1);}
 
     public E remove(int index){
         if(index<0 || index > size ){
