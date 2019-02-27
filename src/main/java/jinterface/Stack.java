@@ -1,4 +1,4 @@
-package Jinterface;
+package jinterface;
 
 public interface Stack<E> {
  int getSize();

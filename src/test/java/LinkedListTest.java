@@ -1,9 +1,7 @@
-import Array.JArrayQueue;
-import Array.JArrayStack;
-import Array.LoopQueue;
-import JLinkedList.JLinkedList;
-import Jinterface.Queue;
-import Jinterface.Stack;
+
+import jinterface.Stack;
+import linkedList.JLinkedList;
+import linkedList.LinkedListStack;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -33,14 +31,13 @@ public class LinkedListTest {
     }
     @Test
     public void stackTest(){
-        Stack jArrayStack = new JArrayStack();
+        Stack stack = new LinkedListStack<>();
         for(int i = 0 ; i < 10 ; i++){
-            jArrayStack.push(i);
-
+            stack.push(i);
         }
-        System.out.println("jArrayStack"+jArrayStack.toString());
-        jArrayStack.pop();
-        System.out.println("jArrayStack"+jArrayStack.toString());
+        System.out.println("jArrayStack"+stack.toString());
+        stack.pop();
+        System.out.println("jArrayStack"+stack.toString());
 
     }
 }

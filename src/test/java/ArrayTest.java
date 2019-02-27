@@ -1,8 +1,8 @@
-import Array.JArrayQueue;
-import Array.JArrayStack;
-import Array.LoopQueue;
-import Jinterface.Queue;
-import Jinterface.Stack;
+import array.JArrayQueue;
+import array.JArrayStack;
+import array.LoopQueue;
+import jinterface.Queue;
+import jinterface.Stack;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,6 +46,7 @@ public class ArrayTest {
         System.out.println("jArrayStack"+jArrayStack.toString());
         jArrayStack.pop();
         System.out.println("jArrayStack"+jArrayStack.toString());
-
+        jArrayStack.push(100);
+        System.out.println("jArrayStack"+jArrayStack.toString());
     }
 }

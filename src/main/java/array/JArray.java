@@ -1,6 +1,4 @@
-package Array;
-
-import java.util.List;
+package array;
 
 /**
  * @author jiahuixi

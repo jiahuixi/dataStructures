@@ -1,4 +1,4 @@
-package Jinterface;
+package jinterface;
 
 public interface Queue<E> {
     int getSize();

@@ -1,6 +1,6 @@
-package Array;
+package array;
 
-import Jinterface.Stack;
+import jinterface.Stack;
 
 /**
  * @author jiahuixi

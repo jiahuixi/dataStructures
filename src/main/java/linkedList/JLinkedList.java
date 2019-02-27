@@ -1,4 +1,4 @@
-package JLinkedList;
+package linkedList;
 
 /**
  * @author jiahuixi
@@ -59,7 +59,7 @@ public class JLinkedList<E> {
         }
         return cur.e;
     }
-    public E getFirst(E e){
+    public E getFirst(){
         return get(0);
     }
     public E getLast(E e){
