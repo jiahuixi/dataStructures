@@ -5,6 +5,7 @@ import jinterface.Queue;
 import jinterface.Stack;
 import linkedList.JLinkedList;
 import linkedList.LinkedListQueue;
+import linkedList.LinkedListQueue2;
 import linkedList.LinkedListStack;
 import org.junit.After;
 import org.junit.Before;
@@ -46,15 +47,15 @@ public class LinkedListTest {
     }
     @Test
     public void queueTest(){
-        Queue queue = new LinkedListQueue();
+        Queue queue = new LinkedListQueue2();
         for(int i = 0 ; i < 10 ; i++){
             queue.enqueue(i);
         }
-        System.out.println("loopQueue"+queue.toString());
-        queue.dequeue();
-        System.out.println("loopQueue"+queue.toString());
+        System.out.println("loopQueue"+queue.toString()+queue.getSize());
+        System.out.println(queue.dequeue());
+        System.out.println("loopQueue"+queue.toString()+queue.getSize());
         queue.enqueue(100);
-        System.out.println("loopQueue"+queue.toString());
+        System.out.println("loopQueue"+queue.toString()+queue.getSize());
 
     }
 }
