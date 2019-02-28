@@ -51,6 +51,85 @@ public class BST<E extends  Comparable<E>> {
         return  contains(root,e);
     }
 
+    public void remove(E e){
+        root = remove(root,e);
+    }
+
+    private Node remove(Node node, E e) {
+        if(node == null){
+            return null;
+        }
+        if(e.compareTo(node.e)>0){
+            node.right = remove(node.right,e);
+            return node;
+        }
+        if(e.compareTo(node.e)<0){
+            node.left = remove(node.left,e);
+            return node;
+        }else{
+            if(node.left == null){
+                Node rightNode = node.right;
+                node.right = null;
+                size--;
+                return rightNode;
+            }
+            if(node.right == null){
+                Node leftNode = node.left;
+                node.left = null;
+                size--;
+                return leftNode;
+            }
+            Node newNode = minimum(node.right);
+            newNode.right = removeMin(node.right);
+            newNode.left = node.left;
+            node.left = node.right = null;
+            return newNode;
+        }
+    }
+    private Node minimum(Node node){
+        if(node.left == null ){
+            return node;
+        }
+        return minimum(node.left);
+    }
+    // 寻找二分搜索树的最大元素
+    public E maximum(){
+        if(size == 0)
+            throw new IllegalArgumentException("BST is empty");
+
+        return maxmum(root).e;
+    }
+    // 寻找二分搜索树的最大元素
+    public E minimum(){
+        if(size == 0)
+            throw new IllegalArgumentException("BST is empty");
+
+        return minimum(root).e;
+    }
+    private Node maxmum(Node node){
+        if(node.right == null){
+            return node;
+        }
+        return maxmum(node.right);
+    }
+
+    public E removeMin(){
+        E ret  = minimum();
+        root = removeMin(root);
+        return ret;
+    }
+
+    private Node removeMin(Node node) {
+        if(node.left == null){
+            Node rightNode = node.right;
+            node.right = null;
+            size--;
+            return rightNode;
+        }
+        node.left = removeMin(node.left);
+        return node;
+    }
+
     private boolean contains(Node node, E e) {
         if(node == null)
             return false;
