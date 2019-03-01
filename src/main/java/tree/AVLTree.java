@@ -203,7 +203,7 @@ public class AVLTree<K extends Comparable<K>,V> {
                 size --;
                 retNode = righeNode;
             }
-            if(node.right == null){
+            else if(node.right == null){
                 Node leftNode = node.left;
                 node.left = null;
                 size --;
