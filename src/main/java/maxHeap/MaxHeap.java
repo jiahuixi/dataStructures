@@ -58,11 +58,14 @@ public class MaxHeap<E extends Comparable <E>> {
         }
     }
     private void siftDown(int k){
+        //所有的非叶子节点
         while (leftChild(k)<data.size()){
             int j = leftChild(k);
+            //取左右节点中最大的值
             if(j+1 <data.size() && data.get(j).compareTo(data.get(j+1)) < 0){
                 j = rightChild(k);
             }
+            //如果当前交换的节点比左右节点值都大的话结束循环
             if(data.get(k).compareTo(data.get(j))>= 0){
                 break;
             }
